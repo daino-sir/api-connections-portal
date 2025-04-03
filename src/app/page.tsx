@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PageWrapper from "@/components/ui/wrappers/page-wrapper";
+import PageWrapper from "@/components/ui/atoms/wrappers/page-wrapper";
 
 export default function Home() {
   return (
