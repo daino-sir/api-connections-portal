@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/peter/Documents/GitHub/Web%20Apps/api-connections-portal/src/components/ui/wrappers/page-wrapper.tsx"],"sourcesContent":["import { ReactNode } from 'react'\r\nexport default function PageWrapper({ children }: { children: ReactNode }) {\r\n  return <div className='flex flex-col md:h-[100dvh] h-fit w-full justify-center items-center'>\r\n    {children}\r\n  </div>\r\n}"],"names":[],"mappings":";;;;;AACe,SAAS,YAAY,EAAE,QAAQ,EAA2B;IACvE,qBAAO,8OAAC;QAAI,WAAU;kBACnB;;;;;;AAEL","debugId":null}},
+    {"offset": {"line": 36, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/peter/Documents/GitHub/Web%20Apps/api-connections-portal/src/app/page.tsx"],"sourcesContent":["'use client'\n\nimport Image from \"next/image\";\nimport PageWrapper from \"@/components/ui/wrappers/page-wrapper\";\n\nexport default function Home() {\n  return (\n   <PageWrapper>\n     <Image src='@public/next.svg' alt='loading...' height='500' width='800' priority style={{}} />\n   </PageWrapper>\n  );\n}\n"],"names":[],"mappings":";;;;AAEA;AACA;AAHA;;;;AAKe,SAAS;IACtB,qBACC,8OAAC,uJAAA,CAAA,UAAW;kBACV,cAAA,8OAAC,6HAAA,CAAA,UAAK;YAAC,KAAI;YAAmB,KAAI;YAAa,QAAO;YAAM,OAAM;YAAM,QAAQ;YAAC,OAAO,CAAC;;;;;;;;;;;AAG9F","debugId":null}}]
+}
