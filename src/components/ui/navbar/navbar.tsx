@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import "./navbar.css";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <nav>
       <ul>

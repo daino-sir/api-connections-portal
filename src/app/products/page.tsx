@@ -3,10 +3,16 @@ import React, { useState } from "react";
 import Navbar from "@/components/ui/navbar/navbar";
 import "./products.css";
 
-const ProductsPage = () => {
-  const [cart, setCart] = useState([]);
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+}
 
-  const products = [
+const ProductsPage: React.FC = () => {
+  const [cart, setCart] = useState<string[]>([]);
+
+  const products: Product[] = [
     { id: 1, name: "Apple", price: 100 },
     { id: 2, name: "Banana", price: 50 },
     { id: 3, name: "Onions", price: 80 },
@@ -21,7 +27,7 @@ const ProductsPage = () => {
     { id: 12, name: "Mangoes", price: 90 },
   ];
 
-  const addToCart = (productName) => {
+  const addToCart = (productName: string): void => {
     setCart([...cart, productName]);
     alert(`${productName} added to cart!`);
   };
