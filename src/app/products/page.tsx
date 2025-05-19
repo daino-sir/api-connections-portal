@@ -1,10 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import Navbar from "@/components/ui/navbar/navbar";
+import { useCart } from "@/context/CartContext";
 import "./products.css"; 
 
 const ProductsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const { addToCart } = useCart();
 
   const products = [
     { id: 1, name: "Apple", price: 100, category: "Fruits" },
@@ -14,7 +16,7 @@ const ProductsPage: React.FC = () => {
     { id: 5, name: "Skuma wiki", price: 30, category: "Vegetables" },
     { id: 6, name: "Tomatoes", price: 70, category: "Vegetables" },
     { id: 7, name: "Cabbages", price: 60, category: "Vegetables" },
-    { id: 8, name: "Ginger", price: 150, category: "Vegetables" },
+    { id: 8, name: "Ginger",price: 150, category: "Vegetables" },
     { id: 9, name: "A crate of eggs", price: 350, category: "Dairy" },
     { id: 10, name: "Avocados", price: 30, category: "Fruits" },
     { id: 11, name: "Spinach", price: 40, category: "Vegetables" },
@@ -44,7 +46,7 @@ const ProductsPage: React.FC = () => {
       <Navbar />
       <div className="products-container">
         <h1>Products</h1>
-        {/* Category Buttons */}
+       
         <div className="category-buttons">
           {categories.map((category) => (
             <button
@@ -66,7 +68,12 @@ const ProductsPage: React.FC = () => {
               <div key={product.id} className="product-card">
                 <h3>{product.name}</h3>
                 <p>Ksh {product.price}</p>
-                <button className="add-to-cart-button">Add to Cart</button>
+                <button
+                  onClick={() => addToCart(product.name)}
+                  className="add-to-cart-button"
+                >
+                  Add to Cart
+                </button>
               </div>
             ))
           ) : (

@@ -4,26 +4,22 @@ import Navbar from "@/components/ui/navbar/navbar";
 import { useCart } from "@/context/CartContext";
 
 const CartPage: React.FC = () => {
-  const { cart } = useCart(); 
+  const { cart } = useCart();
 
   return (
-    <>
+    <div style={{ padding: "2rem" }}>
       <Navbar />
-      <div style={{ padding: "20px", textAlign: "center" }}>
-        <h1>Your Cart</h1>
-        {cart.length === 0 ? (
-          <p>Your cart is empty.</p>
-        ) : (
-          <ul style={{ listStyle: "none", padding: 0 }}>
-            {cart.map((item, index) => (
-              <li key={index} style={{ marginBottom: "10px" }}>
-                {item}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </>
+      <h1>Your Cart</h1>
+      {cart.length === 0 ? (
+        <p>Your cart is empty.</p>
+      ) : (
+        <ul>
+          {cart.map((item, idx) => (
+            <li key={idx}>{item}</li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 };
 

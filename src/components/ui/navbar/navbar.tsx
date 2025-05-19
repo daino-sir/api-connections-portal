@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav>
-      <ul className="navbar">
+      <ul style={{ display: "flex", gap: "20px", listStyle: "none" }}>
         <li>
           <Link href="/">Home</Link>
         </li>
@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
           <Link href="/products">Products</Link>
         </li>
         <li>
-          <Link href="/cart">Cart ({cart.length})</Link> 
+          <Link href="/cart">Cart ({cart.length})</Link>
         </li>
       </ul>
     </nav>
