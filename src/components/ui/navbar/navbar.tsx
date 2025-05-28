@@ -1,11 +1,14 @@
 import React from "react";
 import Link from "next/link";
+import { useCart } from "@/context/CartContext";
 import "./navbar.css";
 
 const Navbar: React.FC = () => {
+  const { cart } = useCart();
+
   return (
     <nav>
-      <ul>
+      <ul style={{ display: "flex", gap: "20px", listStyle: "none" }}>
         <li>
           <Link href="/">Home</Link>
         </li>
@@ -13,7 +16,7 @@ const Navbar: React.FC = () => {
           <Link href="/products">Products</Link>
         </li>
         <li>
-          <Link href="/checkout">Checkout</Link>
+          <Link href="/cart">Cart ({cart.length})</Link>
         </li>
       </ul>
     </nav>
